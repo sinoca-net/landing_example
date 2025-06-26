@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GANAMOS - Crea tu Usuario</title>
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s){
+      if(f.fbq)return;n=f.fbq=function(){
+        n.callMethod ? n.callMethod.apply(n,arguments) : n.queue.push(arguments)
+      };
+      if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)
+    }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '681932944683678'); // Reemplaza con tu ID real
+    fbq('track', 'PageView');
+  </script>
+  <noscript>
+    <img height="1" width="1"
+         src="https://www.facebook.com/tr?id=681932944683678&ev=PageView&noscript=1"/>
+  </noscript>
+</head>
+<body>
+
+  <div class="background">
+    <div class="overlay">
+      <h1>🔥 ESCRIBÍ TU NOMBRE Y CREA TU USUARIO 🔥</h1>
+      <p class="highlight">PAGOS EN EL ACTO Y RETIROS<br>SIN LÍMITE</p>
+      
+      <!-- Botón de WhatsApp con ID para el evento -->
+      <a id="whatsapp-btn" class="btn" href="https://wa.me/+5491171458939" target="_blank">
+        ¡CREA TU USUARIO!
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="icon"/>
+      </a>
+    </div>
+    <footer class="footer">RULETA EN VIVO - SLOTS - APUESTAS</footer>
+  </div>
+
+  <!-- EVENTO CLICK A WHATSAPP -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const whatsappBtn = document.getElementById('whatsapp-btn');
+      if (whatsappBtn) {
+        whatsappBtn.addEventListener('click', function () {
+          fbq('trackCustom', 'ClickWhatsApp');
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
